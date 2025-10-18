@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подготовка к экзамену по алгебре</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Подготовка к экзамену по алгебре</h1>
+        <p>Основные понятия и формулы</p>
+    </header>
+
+    <main>
+        <section class="topic-section">
+            <details open>
+                <summary>
+                    <h2>Основные уравнения прямой</h2>
+                </summary>
+                <div class="topic-content">
+                    <details>
+                        <summary class="question">1. Общее уравнение прямой</summary>
+                        <div class="answer">
+                            <p>Общее уравнение прямой имеет вид:</p>
+                            <code class="formula">Ax + By + C = 0</code>
+                            <p>Где $A$, $B$ и $C$ — постоянные, причем $A$ и $B$ не равны нулю одновременно.</p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary class="question">2. Уравнение прямой с угловым коэффициентом</summary>
+                        <div class="answer">
+                            <p>Уравнение прямой с угловым коэффициентом:</p>
+                            <code class="formula">y = kx + b</code>
+                            <p>Где $k$ — угловой коэффициент ($k = \tan \alpha$), $b$ — отрезок, отсекаемый прямой на оси $Oy$.</p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary class="question">3. Уравнение прямой в отрезках</summary>
+                        <div class="answer">
+                            <p>Уравнение прямой в отрезках:</p>
+                            <code class="formula">\frac{x}{a} + \frac{y}{b} = 1</code>
+                            <p>Где $a$ — отрезок, отсекаемый прямой на оси $Ox$, $b$ — отрезок, отсекаемый прямой на оси $Oy$.</p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary class="question">4. Каноническое и параметрическое уравнения прямой</summary>
+                        <div class="answer">
+                            <h3>Каноническое уравнение прямой:</h3>
+                            <code class="formula">\frac{x - x_0}{m} = \frac{y - y_0}{n}</code>
+                            <p>Где $(x_0, y_0)$ — точка, через которую проходит прямая, и $(m, n)$ — координаты направляющего вектора прямой.</p>
+                            <h3>Параметрическое уравнение прямой:</h3>
+                            <code class="formula">
+                                \begin{cases}
+                                x = x_0 + mt \\
+                                y = y_0 + nt
+                                \end{cases}
+                            </code>
+                            <p>Где $(x_0, y_0)$ — точка, через которую проходит прямая, $(m, n)$ — координаты направляющего вектора прямой, и $t$ — параметр.</p>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary class="question">5. Нормальный и направляющий вектор прямой</summary>
+                        <div class="answer">
+                            <h3>Нормальный вектор прямой:</h3>
+                            <p>Для общего уравнения прямой <code class="formula">Ax + By + C = 0</code>, нормальный вектор $\vec{n}$ имеет координаты:</p>
+                            <code class="formula">\vec{n} = (A, B)</code>
+                            <h3>Направляющий вектор прямой:</h3>
+                            <p>Для канонического/параметрического уравнения прямой <code class="formula">\frac{x - x_0}{m} = \frac{y - y_0}{n}</code>, направляющий вектор $\vec{d}$ имеет координаты:</p>
+                            <code class="formula">\vec{d} = (m, n)</code>
+                            <p>Для общего уравнения прямой <code class="formula">Ax + By + C = 0</code>, направляющий вектор может быть:</p>
+                            <code class="formula">\vec{d} = (-B, A) \quad \text{или} \quad \vec{d} = (B, -A)</code>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary class="question">6. Угол между прямыми</summary>
+                        <div class="answer">
+                            <p>Если прямые заданы угловыми коэффициентами $k_1$ и $k_2$:</p>
+                            <code class="formula">\tan \phi = \left| \frac{k_2 - k_1}{1 + k_1 k_2} \right|</code>
+                            <p>Если прямые заданы направляющими векторами $\vec{d_1} = (m_1, n_1)$ и $\vec{d_2} = (m_2, n_2)$:</p>
+                            <code class="formula">\cos \phi = \frac{|\vec{d_1} \cdot \vec{d_2}|}{||\vec{d_1}|| \cdot ||\vec{d_2}||} = \frac{|m_1 m_2 + n_1 n_2|}{\sqrt{m_1^2 + n_1^2} \sqrt{m_2^2 + n_2^2}}</code>
+                        </div>
+                    </details>
+
+                    <details>
+                        <summary class="question">7. Расстояние между прямыми (от точки до прямой)</summary>
+                        <div class="answer">
+                            <p>Расстояние $d$ от точки $P_0(x_0, y_0)$ до прямой <code class="formula">Ax + By + C = 0</code>:</p>
+                            <code class="formula">d = \frac{|Ax_0 + By_0 + C|}{\sqrt{A^2 + B^2}}</code>
+                        </div>
+                    </details>
+                </div>
+            </details>
+        </section>
+        <!-- Add more topics here following the same structure -->
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Подготовка к экзамену по алгебре</p>
+    </footer>
+</body>
+</html>
