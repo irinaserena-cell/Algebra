@@ -24,17 +24,18 @@ main {
     margin: 20px auto;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 .topic-section {
     margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #e9e9e9;
 }
 
 details {
-    background-color: #e9e9e9;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    margin-bottom: 5px; /* Spacing between nested details */
 }
 
 summary {
@@ -45,6 +46,13 @@ summary {
     font-weight: bold;
     list-style: none; /* Hides the default arrow */
     position: relative;
+    border-radius: 5px; /* Rounded corners for summary */
+}
+
+.topic-section > details > summary {
+    background-color: #e0e0e0; /* Slightly darker for main topic summary */
+    font-size: 1.2em;
+    border-bottom: 1px solid #ccc;
 }
 
 summary::before {
@@ -52,6 +60,7 @@ summary::before {
     position: absolute;
     left: 10px;
     transition: transform 0.2s ease-in-out;
+    color: #333; /* Color for the arrow */
 }
 
 details[open] > summary::before {
@@ -62,21 +71,38 @@ details[open] > summary::before {
 summary:hover {
     background-color: #e0e0e0;
 }
+.topic-section > details > summary:hover {
+    background-color: #d0d0d0;
+}
+
 
 .topic-content, .answer {
     padding: 15px;
-    border-top: 1px solid #eee;
     background-color: #fff;
+    border-top: 1px solid #eee;
+    border-radius: 0 0 5px 5px; /* Rounded bottom corners for content */
 }
 
 .question {
     font-weight: normal;
     background-color: #f8f8f8;
     border-bottom: 1px dotted #eee;
+    padding-left: 30px; /* Indent for nested questions */
 }
 
 .question:hover {
     background-color: #f0f0f0;
+}
+
+.answer p {
+    margin-bottom: 10px;
+    color: #555; /* Ensure general text is gray */
+}
+
+.answer h3, .answer h4 {
+    color: #333;
+    margin-top: 15px;
+    margin-bottom: 5px;
 }
 
 .formula {
@@ -88,6 +114,8 @@ summary:hover {
     font-family: 'Courier New', Courier, monospace;
     overflow-x: auto; /* Позволяет прокручивать длинные формулы */
     border-left: 3px solid #008000;
+    border-radius: 3px;
+    white-space: pre-wrap; /* Ensures line breaks in formulas are respected */
 }
 
 footer {
@@ -96,4 +124,5 @@ footer {
     margin-top: 40px;
     background-color: #333;
     color: #fff;
+    border-radius: 8px;
 }
