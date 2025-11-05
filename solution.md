@@ -10,7 +10,9 @@
 
 Матрица коэффициентов $A$, вектор переменных $x$ и вектор свободных членов $b$:
 
-$$A = \begin{pmatrix} 1 & 3 & 0 & -1 \\ 1 & 1 & 1 & 1 \end{pmatrix}, \quad x = \begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{pmatrix}, \quad b = \begin{pmatrix} -1 \\ 2 \end{pmatrix}$$
+$$
+A = \begin{pmatrix} 1 & 3 & 0 & -1 \\ 1 & 1 & 1 & 1 \end{pmatrix}, \quad x = \begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{pmatrix}, \quad b = \begin{pmatrix} -1 \\ 2 \end{pmatrix}
+$$
 
 ## 2. Нахождение общего решения однородной СЛУ $Ay=0$
 
@@ -19,10 +21,16 @@ $$A = \begin{pmatrix} 1 & 3 & 0 & -1 \\ 1 & 1 & 1 & 1 \end{pmatrix}, \quad x = \
 2. $x_1 + x_2 + x_3 + x_4 = 0$
 
 Приведем расширенную матрицу однородной системы к ступенчатому виду:
-$$\begin{pmatrix} 1 & 3 & 0 & -1 & | & 0 \\ 1 & 1 & 1 & 1 & | & 0 \end{pmatrix}$$
+
+$$
+\begin{pmatrix} 1 & 3 & 0 & -1 & | & 0 \\ 1 & 1 & 1 & 1 & | & 0 \end{pmatrix}
+$$
 
 Вычтем первую строку из второй ($R_2 \to R_2 - R_1$):
-$$\begin{pmatrix} 1 & 3 & 0 & -1 & | & 0 \\ 0 & -2 & 1 & 2 & | & 0 \end{pmatrix}$$
+
+$$
+\begin{pmatrix} 1 & 3 & 0 & -1 & | & 0 \\ 0 & -2 & 1 & 2 & | & 0 \end{pmatrix}
+$$
 
 Ранг матрицы $A$ равен 2 (количество ненулевых строк).
 Количество переменных $n = 4$.
@@ -39,15 +47,24 @@ $$x_1 + \frac{3}{2}c_1 + 3c_2 - c_2 = 0$$
 $$x_1 + \frac{3}{2}c_1 + 2c_2 = 0 \implies x_1 = -\frac{3}{2}c_1 - 2c_2$$
 
 Таким образом, общее решение однородной СЛУ $x_h$ имеет вид:
-$$x_h = \begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{pmatrix} = \begin{pmatrix} -\frac{3}{2}c_1 - 2c_2 \\ \frac{1}{2}c_1 + c_2 \\ c_1 \\ c_2 \end{pmatrix} = c_1 \begin{pmatrix} -\frac{3}{2} \\ \frac{1}{2} \\ 1 \\ 0 \end{pmatrix} + c_2 \begin{pmatrix} -2 \\ 1 \\ 0 \\ 1 \end{pmatrix}$$
+
+$$
+x_h = \begin{pmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{pmatrix} = \begin{pmatrix} -\frac{3}{2}c_1 - 2c_2 \\ \frac{1}{2}c_1 + c_2 \\ c_1 \\ c_2 \end{pmatrix} = c_1 \begin{pmatrix} -\frac{3}{2} \\ \frac{1}{2} \\ 1 \\ 0 \end{pmatrix} + c_2 \begin{pmatrix} -2 \\ 1 \\ 0 \\ 1 \end{pmatrix}
+$$
 
 ## 3. Нахождение частного решения неоднородной СЛУ $Ax=b$
 
 Рассмотрим расширенную матрицу неоднородной системы:
-$$\begin{pmatrix} 1 & 3 & 0 & -1 & | & -1 \\ 1 & 1 & 1 & 1 & | & 2 \end{pmatrix}$$
+
+$$
+\begin{pmatrix} 1 & 3 & 0 & -1 & | & -1 \\ 1 & 1 & 1 & 1 & | & 2 \end{pmatrix}
+$$
 
 Вычтем первую строку из второй ($R_2 \to R_2 - R_1$):
-$$\begin{pmatrix} 1 & 3 & 0 & -1 & | & -1 \\ 0 & -2 & 1 & 2 & | & 3 \end{pmatrix}$$
+
+$$
+\begin{pmatrix} 1 & 3 & 0 & -1 & | & -1 \\ 0 & -2 & 1 & 2 & | & 3 \end{pmatrix}
+$$
 
 Чтобы найти частное решение, присвоим свободным переменным ($x_3$ и $x_4$) нулевые значения: $x_3 = 0$ и $x_4 = 0$.
 
@@ -59,14 +76,19 @@ $$x_1 + 3\left(-\frac{3}{2}\right) - 0 = -1$$
 $$x_1 - \frac{9}{2} = -1 \implies x_1 = -1 + \frac{9}{2} = \frac{-2+9}{2} = \frac{7}{2}$$
 
 Таким образом, частное решение неоднородной СЛУ $x_p$ равно:
-$$x_p = \begin{pmatrix} \frac{7}{2} \\ -\frac{3}{2} \\ 0 \\ 0 \end{pmatrix}$$
+
+$$
+x_p = \begin{pmatrix} \frac{7}{2} \\ -\frac{3}{2} \\ 0 \\ 0 \end{pmatrix}
+$$
 
 ## 4. Общее решение неоднородной СЛУ
 
 Общее решение неоднородной СЛУ представляется в виде суммы частного решения неоднородной СЛУ и общего решения однородной СЛУ:
 $$x_{\text{общ}} = x_p + x_h$$
 
-$$x_{\text{общ}} = \begin{pmatrix} \frac{7}{2} \\ -\frac{3}{2} \\ 0 \\ 0 \end{pmatrix} + c_1 \begin{pmatrix} -\frac{3}{2} \\ \frac{1}{2} \\ 1 \\ 0 \end{pmatrix} + c_2 \begin{pmatrix} -2 \\ 1 \\ 0 \\ 1 \end{pmatrix}$$
+$$
+x_{\text{общ}} = \begin{pmatrix} \frac{7}{2} \\ -\frac{3}{2} \\ 0 \\ 0 \end{pmatrix} + c_1 \begin{pmatrix} -\frac{3}{2} \\ \frac{1}{2} \\ 1 \\ 0 \end{pmatrix} + c_2 \begin{pmatrix} -2 \\ 1 \\ 0 \\ 1 \end{pmatrix}
+$$
 
 ## 5. Размерность многообразия, описывающего общее решение неоднородной СЛУ
 
